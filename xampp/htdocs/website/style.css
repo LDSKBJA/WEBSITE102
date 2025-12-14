@@ -1,0 +1,126 @@
+/* General Page Setup */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Logo */
+.logo img {
+  width: 220px;  /* Adjust size if needed */
+  margin-top: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+.client-header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0; /* Creates the height of the banner */
+            margin-bottom: 30px; /* Space below the banner */
+            font-size: 24px;
+            font-weight: bold;
+        }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Page Content */
+h1 {
+  margin-top: 40px;
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+/* Layout for image beside text */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;              /* space between image and text */
+  max-width: 900px;
+  margin: 40px auto;
+  flex-wrap: wrap;        /* allows stacking on smaller screens */
+}
+
+.about-section img {
+  width: 300px;           /* adjust size as needed */
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  color: #444;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-text h2 {
+    margin-bottom: 5px;
+}
+
+.about-text p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.contact-section {
+    max-width: 600px; /* limits how wide the content can go */
+    margin: 0 auto;   /* centers it horizontally */
+    padding: 20px;    /* optional spacing around the section */
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* ensures long text wraps correctly */
+    align-items: flex-start;
+}
+
+.contact-item strong {
+    width: 90px; /* fixed width for all labels */
+    text-align: right;
+}
+
+.contact-item span {
+    flex: 1;           /* take remaining space */
+    max-width: 500px;  /* optional: limit how wide text can go */
+    word-wrap: break-word; /* ensures text wraps if too long */
+}
+
+.our-client-section {
+            text-align: center;
+        }
+        /**
+        //
+        //
+
+

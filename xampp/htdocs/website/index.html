@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Lo's Delivery Services</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ==================================== */
+        /* Home Page-Specific Styles */
+        /* ==================================== */
+
+        /* The full-width blue banner containing the heading */
+        .home-header {
+            background-color: #15583d;
+            color: white;
+            padding: 20px 0; /* Creates the height of the banner */
+            margin-top: 0; /* Ensures the banner touches the navigation bar */
+            margin-bottom: 40px; /* Space below the banner before content starts */
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Ensure .about-section has the right margins below the banner */
+        .intro {
+            padding: 0 20px; /* Add horizontal padding to the main content area */
+        }
+        nav ul li {
+    display: inline-block; /* make items horizontal */
+    margin: 0 60px;        /* 20px space on left and right of each link */
+}
+
+        nav ul li a {
+            font-size: 20px;   /* Change size as you like */
+            font-weight: 600;
+        }
+
+        .our-client-section {
+            text-align: center;
+        }
+
+           .home-header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.office-hours {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.clock-icon {
+    height: 350px;   /* adjust this number until it looks perfect */
+    width: auto;
+}
+
+.hours-list {
+    text-align: left;
+    font-size: 20px;
+    line-height: 2;
+}
+.footer p {
+    color: white; /* all paragraph text inside .footer becomes white */
+}
+.footer {
+
+            background-color: #15583d;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            line-height: 1.6;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .footer a {
+            color: white; /* all links are white */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #fffa9c; /* optional highlight on hover */
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* space between image and text */
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1 1 10%;  /* image takes 60% of the horizontal space */
+    max-width: 100%;
+    height: 380px;   /* maintain aspect ratio */
+    border-radius: 10px; /* optional rounded corners */
+}
+
+.about-text h2 {
+    font-size: 36px; /* bigger heading */
+    margin-bottom: 20px;
+    color: #15583d; /* example color */
+}
+
+.about-text p {
+    font-size: 20px; /* bigger paragraph text */
+    line-height: 1.8; /* more spacing for readability */
+    color: #444;
+}
+
+/* Main Container for the two-column layout */
+        .feature-section {
+            display: flex; /* Enables flexbox for the two-column layout */
+            max-width: 900px; /* Constrain the width for centering */
+            margin: 50px auto; /* Centers the whole section */
+            border: 1px solid #ccc; /* Subtle border around the content block */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden; /* Ensures image corners are handled by the container border-radius */
+        }
+
+        /* Alternating Feature Section: Flips the order of image and text for variety */
+        .feature-section.alt {
+            flex-direction: row-reverse; /* Puts image on the right, text on the left */
+        }
+
+        /* Image Container */
+        .feature-image-container {
+            flex: 1; /* Takes up one part of the flexible space */
+            min-width: 40%;
+            max-height: 400px; /* Set a consistent height for visual balance */
+            overflow: hidden;
+        }
+
+        .feature-image-container img {
+            width: 100%; /* Image fills its container */
+            height: 100%;
+            display: block;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* Text Container (The white box containing the content) */
+        .feature-text-container {
+            flex: 1.5; /* Takes up more space for the text relative to the image */
+            padding: 30px;
+            text-align: left;
+            background-color: white;
+        }
+
+        .feature-text-container h2 {
+            color: #15583d; /* Blue heading color */
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        /* The small grey line beneath the heading */
+        .feature-text-container .separator {
+            width: 30px;
+            height: 2px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .feature-text-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 0;
+            color: #444;
+        }
+
+        /* Media Query for smaller screens (Stacks sections vertically) */
+        @media (max-width: 768px) {
+            .feature-section,
+            .feature-section.alt {
+                flex-direction: column; /* Stacks image and text vertically */
+                margin: 30px auto;
+            }
+            .feature-image-container {
+                max-height: 250px; /* Reduced height on mobile */
+            }
+        }
+
+.logo {
+        background-color: white; /* Ensures the direct area around the logo is white */
+        /* You might want to remove the specific background-color definition
+           from your external style.css if it's there,
+           or add !important if this internal style is being overridden. */
+    }
+.contact-header {
+            background-color: #15583d;
+            color: white;
+            padding: 20px 0; /* Creates the height of the banner */
+            margin-top: 0; /* Remove default h1 top margin */
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Contact Section Container */
+        .contact-section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center; /* Center the content inside the section */
+        }
+
+        /* Contact Items (to match the layout from your external CSS) */
+        .contact-item {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center; /* Center the items horizontally */
+            font-size: 18px;
+        }
+
+        .contact-item strong {
+            width: 90px; /* Fixed width for labels */
+            text-align: right;
+        }
+
+        .contact-item span {
+            flex: 1; /* Take remaining space */
+            text-align: left;
+        }
+
+         .quotation-header {
+            background-color: #15583d;
+            color: white;
+            padding: 20px 0; /* Creates the height of the banner */
+            margin-top: 0; /* Ensures the banner touches the navigation bar */
+            margin-bottom: 20px; /* Space below the banner before the form starts */
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Form styling to ensure it's centered and readable */
+        #emailForm {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align labels left */
+        }
+
+        #emailForm label {
+            display: block; /* Make labels take full width */
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #emailForm input[type="text"],
+        #emailForm input[type="tel"],
+        #emailForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding in element's width/height */
+        }
+
+        #emailForm button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block; /* Make button full width */
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="logo">
+    <img src="picture/logo.png" alt="Lo's Delivery Services Logo">
+</div>
+
+<nav>
+    <ul>
+        <li><a href="http://localhost/login_register/" class="login-button">Login</a></li>
+    </ul>
+</nav>
+
+<h1 class="home-header">
+    Lo's Delivery Services:<br>
+    Your Delivery Business Solution
+</h1>
+
+
+<main>
+    <section class="intro">
+        <div class="about-section">
+            <img src="picture/about.jpg" alt="Lo's Delivery Services about" class="about-image">
+            <div class="about-text">
+                <h2>Why Us?</h2>
+                <p>
+                    With over 15 years of experience, we started our company with one goal: to make logistics simple, stress-free, and dependable for every client. With a growing fleet of well-maintained vehicles and a team of professional drivers, we handle each delivery with care and precision. Our focus is on building long-term relationships, not just completing transactions.
+                </p>
+            </div>
+        </div>
+
+        <section class="our-client-section"> <div class="home-header">Office Hours</div> <div class="office-hours"> <img src="picture/clock.jpg" alt="Clock" class="clock-icon"> <div class="hours-list"> <p>Monday 8:00 - 17:00</p> <p>Tuesday 8:00 - 17:00</p> <p>Wednesday 8:00 - 17:00</p> <p>Thursday 8:00 - 17:00</p> <p>Friday 8:00 - 17:00</p> <p>Saturday 8:00 - 15:00</p> <p>Sunday Closed</p> </div> </div> </section>
+
+        <section class="our-client-section">
+            <div class="home-header">Our Clients</div>
+
+            <img src="picture/client.JFIF" alt="Client Logos" class="client-logo-grid">
+        </section>
+
+        <section class="feature-section">
+            <div class="feature-image-container">
+                <img src="picture/side.jpg" alt="A growing fleet of delivery vehicles at a logistics hub.">
+            </div>
+            <div class="feature-text-container">
+                <h2>About Us</h2>
+                <div class="separator"></div>
+                <p>With over 15 years of experience, we started our company with one goal: to make logistics simple, stress-free, and dependable for every client.</p>
+                <p>With a growing fleet of well-maintained vehicles and a team of professional drivers, we handle each delivery with care and precision. Our focus is on building long-term relationships, not just completing transactions.</p>
+            </div>
+        </section>
+
+        <section class="feature-section alt">
+            <div class="feature-image-container">
+                <img src="picture/control.jpeg" alt="Interior of a temperature-controlled truck for fresh goods.">
+            </div>
+            <div class="feature-text-container">
+                <h2>Temperature Controlled Vehicles</h2>
+                <div class="separator"></div>
+                <p>For goods that need to stay fresh or stable, our temperature-controlled vans and trucks provide precise climate management.</p>
+                <p>This ensures that food, pharmaceuticals, and other sensitive products** remain in perfect condition from pickup to delivery.</p>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="feature-image-container">
+                <img src="picture/roof.jpeg" alt="Mechanic servicing a van to ensure maintenance schedule compliance.">
+            </div>
+            <div class="feature-text-container">
+                <h2>Reliability</h2>
+                <div class="separator"></div>
+                <p>Fleet reliability is key to avoiding delivery delays. That’s why we follow a strict maintenance schedule, inspecting and servicing our vans regularly.</p>
+                <p>This proactive approach minimizes breakdowns, keeps our drivers safe, and ensures uninterrupted service for our customers.</p>
+            </div>
+        </section>
+
+        <section class="feature-section alt">
+            <div class="feature-image-container">
+                <img src="picture/whole.jpg" alt="Professional delivery driver preparing a package for delivery.">
+            </div>
+            <div class="feature-text-container">
+                <h2>Our Drivers</h2>
+                <div class="separator"></div>
+                <p>Our dedicated drivers are the backbone of our service. Each one is trained to handle deliveries with care, follow best practices, and maintain clear communication with clients.</p>
+                <p>Their professionalism ensures your shipments arrive safely and on time, no matter the distance or schedule.</p>
+            </div>
+        </section>
+
+        <h1 class="contact-header">Contact Us</h1>
+
+        <section class="contact-section">
+            <div class="contact-item">
+                <strong>Phone:</strong>
+                <span>604-760-5202</span>
+            </div>
+            <div class="contact-item">
+                <strong>Address:</strong>
+                <span>7733 Heather Street, Richmond, BC, Canada V6Y 4J1</span>
+            </div>
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <span>losdeliveryservices@gmail.com</span>
+            </div>
+        </section>
+
+        <h1 class="quotation-header">Quotation</h1>
+
+        <main>
+            <section class="intro">
+                <form id="emailForm" onsubmit="sendEmail(); return false;">
+                    <label for="contactName">Contact Name:</label>
+                    <input type="text" id="contactName" required><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required><br>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" required><br>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="6" required></textarea><br>
+
+                    <button type="submit">Send</button>
+                </form>
+
+                <script>
+function sendEmail() {
+    const name = document.getElementById("contactName").value;
+    const phone = document.getElementById("phone").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const body =
+        "Contact Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Subject: " + subject + "\n" +
+        "Message: " + message;
+
+    // Use window.location.href to generate the mailto link
+    window.location.href =
+        "mailto:a1443827001@gmail.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body); // Use encodeURIComponent for the body
+}
+</script>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>
+                At Lo’s Delivery Services, we make shipping simple and efficient.
+                Whether it’s local or long-distance, our trusted team ensures every
+                package arrives safely and on time.
+            </p>
+
+            <p>
+                Explore our services or <a href="contact.html">contact us</a> to get started today.
+            </p>
+
+            <div class="footer-bottom">
+                <p>© 2025 Lo’s Delivery Services. All rights reserved.</p>
+            </div>
+
+
+        </footer>

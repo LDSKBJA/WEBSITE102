@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main Container (The White Card) */
+.container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 350px;
+    text-align: center;
+}
+
+/* Form Headings */
+
+.form-box {
+    display: none; /* Hides by default */
+    opacity: 0;
+}
+.form-box.active {
+    display: block; /* Shows when active */
+    opacity: 1;
+}
+
+.form-box h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Input and Select Fields (Matching the light grey, rounded style) */
+.form-box input,
+.form-box select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button Styling (Matching the dominant blue color) */
+.form-box button {
+    width: 100%;
+    padding: 15px;
+    background-color: #5d8cfd; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-box button:hover {
+    background-color: #4477ee;
+}
+
+/* "Don't have an account?" text */
+.form-box p {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Register/Login link */
+.form-box a {
+    color: #5d8cfd; /* Blue color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.error-message {
+    padding: 12px;
+    background: #f8d7da;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #a42834;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size:50px;
+}
+span{
+    color:#7494ec;
+
+}
+
+.box p{font-size: 22px;}
+.box button{
+    display: block;
+    width:300px;
+    margin:0 auto;
+}
